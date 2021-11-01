@@ -1,0 +1,199 @@
+/*
+Theme Name: WordPress Template
+Author: VOID Tech Consulting
+Description: Basic Template for Wordpress
+Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/*************************************
+  Start reset 
+**************************************/
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Remove default padding */
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  background: var(--background-main);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* END Reset */
+
+/*************************************
+  General styles 
+**************************************/
+
+:root {
+  --background-main: white;
+  --text-light: #383838;
+  --text-mid: #080808;
+  --primary: rgb(84, 181, 96);
+  --padding: 16px;
+  --border: thin solid rgba(255, 255, 255, .15);
+}
+
+/*************************************
+  Layout styles 
+**************************************/
+#page-content {
+  flex: 1;
+  display: flex;
+}
+
+/*************************************
+  Center content styles 
+**************************************/
+#page-center {
+  flex: 1;
+  background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*************************************
+  Left panel styles 
+**************************************/
+#sidebar {
+  width: 240px;
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#logo {
+  height: 40px;
+  margin: 1rem 0;
+}
+
+#nav {
+  width: 100%;
+}
+
+.page-link-button {
+  color: var(--text-mid);
+  cursor: pointer;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.page-link-button>ion-icon {
+  margin-right: 1rem;
+}
+
+.page-link-button:hover {
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.page-link-button.active {
+  background: rgba(255, 255, 255, .1);
+}
+
+.page-link-button.active:hover {
+  color: var(--text-mid);
+}
+
+/*************************************
+  Bottom panel styles 
+**************************************/
+#bottom-panel {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--padding);
+  border-top: var(--border);
+}
+
+.nav-links {
+  
+}
+
+.nav-links>li {
+  display: inline;
+  margin-right: 2vw;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 1px;
+}
